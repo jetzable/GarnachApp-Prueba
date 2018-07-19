@@ -79,6 +79,10 @@ a:focus {
 	outline: none !important;
 }
 
+.separation{
+  margin-top: 3em;
+}
+
 a:hover {
 	text-decoration: none;
   color: #333333;

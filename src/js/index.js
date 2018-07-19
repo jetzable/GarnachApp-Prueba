@@ -46,7 +46,7 @@ window.verifyAccountWithEmail = () => {
 }
 
 
-window.loginUser = (email, password, emailVerificationStatus) => {
+window.loginUser = (email, password) => {
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then(() => {
     location.href = ('views/newsfeed.html');
