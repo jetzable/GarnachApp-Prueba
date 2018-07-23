@@ -74,8 +74,7 @@ window.googleUserLogin = () => {
     let token = result.credential.accessToken;
     // The signed-in user info.
     let user = result.user;
-    console.log(user);
-    console.log(token);
+    location.href = ('views/newsfeed.html');
     // ...
   })
   .catch((error) => {
@@ -100,8 +99,7 @@ window.facebookUserLogin = () => {
     let token = result.credential.accessToken;
     // The signed-in user info.
     let user = result.user;
-    console.log(user);
-    console.log(token);
+    location.href = ('views/newsfeed.html');
     // ...
   })
   .catch((error) => {
