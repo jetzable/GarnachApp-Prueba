@@ -11,4 +11,9 @@ document.getElementById('login-button').addEventListener('click', event => {
 document.getElementById('google-sign-in').addEventListener('click', event => {
     event.preventDefault();
     googleUserLogin();
+});
+
+document.getElementById('facebook-sign-in').addEventListener('click', event => {
+    event.preventDefault();
+    facebookUserLogin();
 })
