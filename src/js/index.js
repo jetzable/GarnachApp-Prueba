@@ -2,7 +2,7 @@
 window.initializeFirebase = () => {
   firebase.initializeApp({
     apiKey: "AIzaSyA2_g2xx4nNZIKuqwbaUwk3HaA4mEesgCM",
-    authDomain: "garnachapp-labo.firebaseapp.com",
+    //authDomain: "garnachapp-labo.firebaseapp.com",
     databaseURL: "https://garnachapp-labo.firebaseio.com",
     projectId: "garnachapp-labo",
     storageBucket: "",
@@ -153,7 +153,7 @@ window.addingDataToNewsfeed = (user, input) => {
 }
 
 
-window.singOutUser = () => {
+window.signOutUser = () => {
   firebase.auth().signOut()
     .then(() => {
       // Sign-out successful.

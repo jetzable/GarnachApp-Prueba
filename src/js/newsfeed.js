@@ -19,7 +19,7 @@ document.getElementById('user-post-btn').addEventListener('click', event => {
 
 document.getElementById('log-out-btn').addEventListener('click', event => {
     event.preventDefault();
-    singOutUser();
+    signOutUser();
     alert('¡Hasta la próxima Garnacha!');
     location.href = ('../index.html');
 });
