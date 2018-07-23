@@ -20,12 +20,26 @@
 </head>
 
 <body>
-  <button id="log-out-btn" class="login100-form-btn">
-    Salir
-  </button>
-
-
+  <div class="limiter">
+    <header class="card-header">Bienvenido</header>
+    <section id="post-section">
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span id="user-post-btn" class="input-group-text login100-form-btn">Recomendar</span>
+            </div>
+            <textarea id="user-post" class="form-control post-section" aria-label="With textarea"></textarea>
+          </div>
+          <div id="list-post" class="card">
+          </div>
+    </section>
+    <button id="log-out-btn" class="login100-form-btn">
+      Salir
+    </button>
+  </div>
+  <!--////////////////////Firebase & Firestore////////////////////-->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+  <!--/////////////////Template files////////////////////////////-->
   <script src="../css/theme/Login_v17/vendor/jquery/jquery-3.2.1.min.js"></script>
   <script src="../css/theme/Login_v17/vendor/animsition/js/animsition.min.js"></script>
   <script src="../css/theme/Login_v17/vendor/bootstrap/js/popper.js"></script>
@@ -35,7 +49,8 @@
   <script src="../css/theme/Login_v17/vendor/daterangepicker/daterangepicker.js"></script>
   <script src="../css/theme/Login_v17/vendor/countdowntime/countdowntime.js"></script>
   <script src="../css/theme/Login_v17/js/main.js"></script>
- <script src="../js/index.js"></script>
+  <!--//////////////////////Basic Functions////////////////////////////////////-->
+  <script src="../js/index.js"></script>
   <script src="../js/newsfeed.js"></script>
 </body>
 

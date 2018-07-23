@@ -63,6 +63,34 @@ window.loginUser = (email, password) => {
     });
 }
 
+
+window.googleUserLogin = () => {
+  let provider = new firebase.auth.GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  firebase.auth().useDeviceLanguage();
+  firebase.auth().signInWithPopup(provider)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    let token = result.credential.accessToken;
+    // The signed-in user info.
+    let user = result.user;
+    console.log(user);
+    console.log(token);
+    // ...
+  })
+  .catch((error) => {
+    // Handle Errors here.
+    let errorCode = error.code;
+    let errorMessage = error.message;
+    // The email of the user's account used.
+    let email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    let credential = error.credential;
+    console.log(errorCode);
+    // ...
+  });
+}
+
 window.verifyLoginUser = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -82,6 +110,21 @@ window.verifyLoginUser = () => {
     }
   });
 }
+
+window.addingDataToNewsfeed = (user, input) => {
+  db.collection("posts").add({
+    username: "user",
+    postInput: "input",
+})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
+
+}
+
 
 window.singOutUser = () => {
   firebase.auth().signOut()

@@ -6,4 +6,9 @@ document.getElementById('login-button').addEventListener('click', event => {
     let email = document.getElementById('email-field').value;
     let password = document.getElementById('password-field').value;
     loginUser(email, password);    
+});
+
+document.getElementById('google-sign-in').addEventListener('click', event => {
+    event.preventDefault();
+    googleUserLogin();
 })
