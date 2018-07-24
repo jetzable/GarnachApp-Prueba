@@ -12,6 +12,10 @@ body{
   color: white;
 }
 
+.individual-post{
+  background-color: #343a40
+}
+
 /*.register-box {
   margin: 0.5px;
   text-align: -webkit-center;

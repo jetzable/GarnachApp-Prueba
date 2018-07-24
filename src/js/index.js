@@ -188,18 +188,37 @@ window.verifyLoginUser = () => {
   });
 }
 
-window.addingDataToNewsfeed = (user, input) => {
-  db.collection("posts").add({
-    username: "user",
-    postInput: "input",
-})
-.then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-})
-.catch(function(error) {
-    console.error("Error adding document: ", error);
-});
+window.addingDataToNewsfeed = (input) => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      // User is signed in.
+      let displayName = user.displayName;
+      let email = user.email;
+      let photoURL = user.photoURL;
+      let uid = user.uid;
+      let postTime = `${new Date()}`;
+      db.collection("posts").add({
+        username: displayName,
+        postInput: input,
+        userEmail: email,
+        profilePhoto: photoURL,
+        userID: uid,
+        time: postTime
 
+    })
+    .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+        printUserPost();
+    })
+    .catch((error) => {
+        console.error("Error adding document: ", error);
+    });
+      // ...
+    } else {
+      // User is signed out.
+      console.log('nooo');
+    }
+  });
 }
 
 
