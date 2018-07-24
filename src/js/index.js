@@ -50,7 +50,7 @@ window.loginUser = (email, password) => {
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then(() => {
      
-    location.href = ('views/newsFeed.html');
+    location.href = ('views/newsfeed.html');
     console.log('siii');
     })
     .catch((error) => {
@@ -76,7 +76,7 @@ window.googleUserLogin = () => {
     let token = result.credential.accessToken;
     // The signed-in user info.
     let user = result.user;
-    location.href = ('views/newsFeed.html');
+    location.href = ('views/newsfeed.html');
     // ...
   })
   .catch((error) => {
@@ -101,7 +101,7 @@ window.facebookUserLogin = () => {
     let token = result.credential.accessToken;
     // The signed-in user info.
     let user = result.user;
-    location.href = ('views/newsFeed.html');
+    location.href = ('views/newsfeed.html');
     // ...
   })
   .catch((error) => {
@@ -126,7 +126,7 @@ window.twitterUserLogin = () => {
     let token = result.credential.accessToken;
     // The signed-in user info.
     let user = result.user;
-    location.href = ('views/newsFeed.html');
+    location.href = ('views/newsfeed.html');
     // ...
   })
   .catch((error) => {
@@ -151,7 +151,7 @@ window.githubUserLogin = () => {
     let token = result.credential.accessToken;
     // The signed-in user info.
     let user = result.user;
-    location.href = ('views/newsFeed.html');
+    location.href = ('views/newsfeed.html');
     // ...
   })
   .catch((error) => {
