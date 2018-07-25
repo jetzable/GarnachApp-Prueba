@@ -15,11 +15,12 @@ const printUserPost = () => {
           <span mb-4 mt-3>${post.data().postInput}</span>
           </div>
           <div class="card-body-sm individual-post">
-          <strong>${post.data().username}</strong>
+          <i>${post.data().username}</i>
           <span class="card-text font-color">
           <i class="fas fa-grin-tongue ml-4" title="Me apetece"></i>
           <i class="fas fa-share ml-4" title="Compartir"></i>
           <i class="fas fa-trash-alt ml-4" title="Eliminar" onclick="deletePost()"></i>
+          <i class="fas fa-edit ml-4" title="Editar" onclick="editPost()"></i>
       </span>
           </div>
         </div>
