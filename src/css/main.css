@@ -1,143 +1,47 @@
-/*@media (max-width: 992px) {
-  .welcome {
-    width: 50%;
-    float: right;
-    display: block;
-body{
-    background-color: rgba(255, 94, 58, 0.95);
-    font-family: 'roboto';
-    font-weight: 700;
-    font-size: 2em;
-    }
-    header {
-      height: fixed;
-      /*background-image: url("../images/");*/
-      body{
-        background-color: rgba(255, 94, 58, 0.95);
-        font-family: 'Montserrat';
-        font-weight: 700;
-        font-size: 2em;
-        }
-    
-        header {
-          height: fixed;
-          /*background-image: url("../images/");*/
-        }
-      .img-fluid {
-        width: 50%;
-      }
-  
-  .form-inline{
-  flex-flow: inherit;
+@media (max-width: 320px){
+  body{
+    padding-top: 3em;
   }
-  
-  .p{
-     text-align: right;
+}
+
+@media (min-width: 360px){
+  body{
+    padding-top: 5em;
   }
-  .dropup .dropdown-toggle::after{
-    margin-left: 0 !important ;
+}
+
+@media (min-width: 375px){
+  body{
+    padding-top: 10em;
   }
-  
-  /*Medida para RWD en smartphone*/
-    @media (min-width: 576px) {
-    .img-fluid {
-      width: 50%;
-    }
-    .input-width {
-      width: 80%;
-    }
-    .navbar-nav {
-      font-size: 0.6em;
-    }
-  }  
-  /*Medida para RWD en tabletas*/
-  @media (min-width: 768px) {
-    .img-fluid {
-      width: 50%;
-    }
-    .input-width{
-      width: 100%;
-    }
-    .navbar-nav {
-      font-size: 1em;
-    }
-  }  
-  /*Medida para RWD en laps o desktop mediano*/
-  @media (min-width: 992px) {
-    .img-fluid {
-      width: 25%;
-    }
+}
+
+@media (min-width: 576px){
+  body{
+    padding-top: 5em;
   }
-  /*Medida para RWD en laps grandes*/
-  @media (min-width: 1200px) {
-    .img-fluid {
-      width: 25%;
-    }
+}
+
+@media (min-width: 768px){
+  body{
+    padding-top: 20em;
   }
-      /*.login-form {
-        width: 50%;
-    
-      }
-    .welcome ::before  {
-      width: 100%;    
-      display: block;
-      position: absolute;
-    }*/
-  
-  
-  /*@media (max-width: 475px) {
-    .login-form {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    @media (max-width: 992px) {
-        .login-form {
-          width: 50%;
-          overflow: auto;
-      
-        }*/
-  
-  /*.form-control{
-      margin-top: 1em;
-      margin-bottom: 0.5em;
-      height: 7em;
-      border: solid 1px #000000;
-      
+}
+
+@media (min-width: 992px){
+  body{ 
+    padding-top: 15em;
   }
-  /*
-  @media (max-width: 768px) {
-    .container {
-  
-    }
-  
-    .welcome {
-  
-    }
-  */
-  .font-color{
-    color: aliceblue;
+}
+
+@media (min-width: 1024px){
+  body{
+    padding-top: 25em;
   }
-  
- /* @media (max-width: 0px) {
-    navbar-nav .open .dropdown-menu {
-        position: fixed;
-        float: none;
-        width: auto;
-        margin-top: 0;
-        background-color: transparent;
-        border: 0;
-        box-shadow: none;
-      }
-      .navbar-nav .open .dropdown-menu > li > a,
-      .navbar-nav .open .dropdown-menu .dropdown-header {
-        padding: 5px 15px 5px 25px;
-      }
-      .navbar-nav .open .dropdown-menu > li > a {
-        line-height: 20px;
-      }
-      .navbar-nav .open .dropdown-menu > li > a:hover,
-      .navbar-nav .open .dropdown-menu > li > a:focus {
-        background-image: none;
-      }
-    }
+}
+
+@media (min-width: 120px){
+  body{
+    padding-top: 12em;
+  }
+}
