@@ -175,27 +175,6 @@ window.githubUserLogin = () => {
     });
 };
 
-
-window.verifyLoginUser = () => {
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      // User is signed in.
-      let displayName = user.displayName;
-      let email = user.email;
-      let emailVerified = user.emailVerified;
-      let photoURL = user.photoURL;
-      let isAnonymous = user.isAnonymous;
-      let uid = user.uid;
-      let providerData = user.providerData;
-      let password = user.password;
-      // ...
-    } else {
-      // User is signed out.
-      console.log('nooo');
-    }
-  });
-};
-
 window.addingDataToNewsfeed = (input) => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -205,6 +184,9 @@ window.addingDataToNewsfeed = (input) => {
       let photoURL = user.photoURL;
       let uid = user.uid;
       let postTime = firebase.firestore.FieldValue.serverTimestamp();
+      if (displayName === null) {
+        displayName = email;
+      }
       db.collection('posts').add({
         username: displayName,
         postInput: input,

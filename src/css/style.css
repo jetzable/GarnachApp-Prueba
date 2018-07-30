@@ -1,10 +1,19 @@
 body{
   background-image: url('https://i.imgur.com/HSBjPWM.jpg');
+  background-size: 100%; 
+  background-color: #E32F21;
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: center;
   font-family: 'Cuprum', sans-serif;
   font-weight: 600;
+  color: aliceblue;
 }
+
+a{
+  color: aliceblue;
+}
+
 .btn{
     margin: .6em;
     background-color: #6c757d;
